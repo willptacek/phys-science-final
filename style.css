@@ -1,0 +1,261 @@
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --animate-speed: 1s;
+}
+
+/* overflow: hidden removes scrollbars */
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Page Colors */
+
+#page-1 {
+  background: var(--page-1-color);
+}
+#page-2 {
+  background: var(--page-2-color);
+}
+#page-3 {
+  background: var(--page-3-color);
+}
+#page-4 {
+  background: var(--page-4-color);
+}
+
+#page-5 {
+  background: coral;
+}
+
+#page-6 {
+  background: #730c9b;
+}
+
+#page-7 {
+  background: #31adff;
+}
+
+#page-8 {
+  background: #34b083;
+}
+
+#page-9 {
+  background: #ff7762;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 4rem;
+}
+
+.page p,
+.page .btn {
+  position: relative;
+  left: 20px;
+}
+
+#page-1 p {
+  font-size: 2rem;
+  position:relative;
+  left: 20px;
+}
+
+#page-1 .btn {
+  position: relative;
+  left: 20px;
+}
+
+/* Image Box */
+
+.image-box .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.image-box .overlay .text {
+  position: absolute;
+  top: 25%;
+  left: 23%;
+}
+
+.image-box:hover .overlay{
+  opacity: 1;
+}
+
+/* Page 3 specific work */
+
+#page-3 .image-box {
+  height:154px;
+  width: 327px;
+  position: relative;
+  left: 1000px;
+}
+
+#page-3 .image-box .overlay {
+  height: 154px;
+  width: 327px;
+  background-color: maroon;
+}
+
+/* Page 4 specific work */
+
+#page-4 .image-box {
+  height: 376px;
+  width: 561px;
+  position: relative;
+  left: 1000px;
+  top: -75px;
+}
+
+#page-4 .image-box .overlay {
+  background-color: black;
+}
+
+#page-4 .image-box .text {
+  position: relative;
+  left: 0;
+  top: 35%;
+}
+
+#page-4 .image-box img {
+  height: 100%;
+  width: 100%;
+}
+
+/* page 5, youtube video specific */
+#page-5 iframe {
+  position:relative;
+  left: 1000px;
+}
+
+/* page 6 */
+#page-6 .image-box {
+  height: 376px;
+  width: 561px;
+  position: relative;
+  left: 1000px;
+  top: -75px;
+}
+
+#page-6 .image-box .overlay {
+  background-color: #9b870c;
+}
+
+#page-6 .image-box .text {
+  position:relative;
+  left: 0;
+  top: 35%;
+}
+
+#page-6 .image-box img {
+  height: 100%;
+  width: 100%;
+}
+
+/* page 7 */
+#page-7 .image-box {
+  height: 376px;
+  width: 561px;
+  position: relative;
+  left: 1000px;
+  top: -75px;
+}
+
+#page-7 .image-box .overlay {
+  background-color: #ff7931;
+}
+
+#page-7 .image-box .text {
+  position:relative;
+  left: 0;
+  top: 35%;
+}
+
+#page-7 .image-box img {
+  height: 100%;
+  width: 100%;
+}
+
+/* general page formatting */
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* animations */
+
+#page-1 h1 {
+  animation: animate1 var(--animate-speed) forwards ease-in-out;
+}
+
+@keyframes animate1 {
+  from{
+    transform: translateY(-700px);
+  }
+
+  to{
+    transform: translateY(0);
+  }
+}
+
+#page-1 p {
+  animation: animate2 var(--animate-speed) forwards ease-in-out;
+}
+
+@keyframes animate2 {
+  from{
+    transform: translateX(-1000px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
